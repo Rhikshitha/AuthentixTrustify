@@ -1,0 +1,3 @@
+Steps to run the llm:
+1. First run the feeder.py
+2. Run main.py
