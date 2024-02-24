@@ -1,7 +1,8 @@
 import React from 'react';
 import './HomePage.css';
+import ChatBot from './ChatBot';
 
-const HomePage: React.FC = () => {
+const Chat: React.FC = () => {
   const sentence = 'AuthentixTrustify: Pioneering Deep Learning for Document Processing and Verification';
   const [typedSentence, setTypedSentence] = React.useState('');
   const [currentIndex, setCurrentIndex] = React.useState(0);
@@ -29,11 +30,10 @@ const HomePage: React.FC = () => {
         <h2>{typedSentence}</h2>
       </div>
       <div className="right-panel">
-        <button className="login-button">Login</button>
-        <button className="signup-button">Signup</button>
+        <ChatBot/>
       </div>
     </div>
   );
 }
 
-export default HomePage;
+export default Chat;

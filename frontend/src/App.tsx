@@ -12,6 +12,8 @@ import UserLogin from "./components/UserLogin"
 import UserRegister from "./components/UserRegister"
 import './App.css'
 import HomePage from "./components/HomePage"
+// import ChatBot from "./components/ChatBot"
+import Chat from "./components/Chat"
 
 
 
@@ -24,6 +26,7 @@ function App() {
                 <Route path='/register' element={<UserRegister />} />
                 <Route path='' element={<HomePage />} />
                 <Route path='/404_page_not_found/' element={<PageNotFound />} />
+                <Route path='/chatbot' element={<Chat/>}/>
             </Routes>
         </Router>
     </div>
