@@ -1,0 +1,87 @@
+/* HomePage.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  .home-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .left-panel {
+    flex: 7;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative; /* Add position relative */
+  }
+  
+  .top-left {
+    position: absolute;
+    top: 20px; /* Adjust the top value as needed */
+    left: 20px; /* Adjust the left value as needed */
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 50px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+    margin-right: 10px; /* Add some margin between logo and title */
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  h2 {
+    margin-top: 20px; /* Add margin between title and animated text */
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .right-panel {
+    flex: 3;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1;
+  }
+  
+  /* Animation for typing effect */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  }
+  
+  .typing-animation {
+    animation: typing 2s steps(40, end) infinite;
+    color: #ab68ff; /* Color for the letters */
+  }
+  
+  .login-button, .signup-button {
+    margin-top: 20px; /* Add margin between buttons and bottom edge */
+    padding: 10px 20px;
+    width: 150px; /* Set the same width for both buttons */
+    font-size: 16px;
+    background-color: black;
+    color: #FFCAD4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block; /* Display buttons inline */
+  }
+  
+  .signup-button {
+    margin-left: 10px; /* Add margin between buttons */
+  }
+  
+  .login-button:hover, .signup-button:hover {
+    background-color: gray;
+  }
+  
