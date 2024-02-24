@@ -14,8 +14,7 @@ const ChatBot: React.FC = () => {
     if (!inputValue.trim()) return;
     const newMessages = [...messages, { text: inputValue, isUser: true }];
     setMessages(newMessages);
-    setInputValue('');
-  
+    console.log(inputValue)
     try {
       const response = await fetch('http://127.0.0.1:8000/send_message/', {
         method: 'POST',
@@ -27,6 +26,7 @@ const ChatBot: React.FC = () => {
     } catch (error) {
       console.error('Error sending message:', error);
     }
+    setInputValue('')
   };
   
 

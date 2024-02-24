@@ -6,6 +6,9 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.hashers import make_password
 from django.contrib.auth import authenticate,login,logout
 from django.http import JsonResponse
+from llm_model import main
+import json
+from llm_model.main import generate_answer
 
 
 class HomeView(LoginRequiredMixin,APIView):
@@ -22,8 +25,9 @@ class Demo(APIView):
 class SendMessage(APIView):
     def post(self,request):
         if request.method == 'POST':
-            message = request.POST.get('message', '')
-            print("Message: ",message)
-            response_message = f"You said: {message}."
+            data = json.loads(request.body)
+            query = data.get("message")
+            answer = generate_answer(query=query)
+            response_message = f"Bot Response: {answer}."
             return JsonResponse({'message': response_message})
         return JsonResponse({'error': 'Invalid request method'}, status=400)

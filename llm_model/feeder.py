@@ -10,7 +10,7 @@ from langchain_community.vectorstores import FAISS
 
 def load_and_split_docs(chunk_size=1024, chunk_overlap=100):
     loader = TextLoader(
-        "docs/sample.txt"
+        "./docs/sample2.txt"
     )
 
     text_splitter = RecursiveCharacterTextSplitter(

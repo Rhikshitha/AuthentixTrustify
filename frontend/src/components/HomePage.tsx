@@ -29,8 +29,8 @@ const HomePage: React.FC = () => {
         <h2>{typedSentence}</h2>
       </div>
       <div className="right-panel">
-        <button className="login-button">Login</button>
-        <button className="signup-button">Signup</button>
+        <button className="login-button"><a href='Login/'>Login</a></button>
+        <button className="signup-button"><a href='Register/'>Signup</a></button>
       </div>
     </div>
   );
